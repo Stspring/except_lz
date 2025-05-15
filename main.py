@@ -1,11 +1,9 @@
-from wert import DatasetHandler
+from Dprocessing import Data_Proc 
 
 def main():
-    dataset_path = "var1.csv"
-    expected_columns = ["column1", "column2", "column3"]
-      
-    handler = DatasetHandler(dataset_path, expected_columns)
-    handler.process_dataset()
+    filename = "var1.csv"  
+    processor = Data_Proc(filename)  
+    processor.validate_file()  
 
 if __name__ == "__main__":
-    main()
+    main() 
